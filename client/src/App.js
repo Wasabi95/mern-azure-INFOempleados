@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const baseUrl = 'https://mern-azure-app1-bebkh3dgggaegng6.eastus-01.azurewebsites.net'; // Adjust the base URL if necessary
+const baseUrl = 'https://mern-azure-app1-bebkh3dgggaegng6.eastus-01.azurewebsites.net/records'; // Adjust the base URL if necessary
 
 const App = () => {
   const [records, setRecords] = useState([]);
