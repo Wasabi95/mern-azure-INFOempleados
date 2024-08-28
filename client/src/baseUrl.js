@@ -5,3 +5,7 @@
 // baseUrl.js
 // const baseUrl = 'http://localhost:3001'; // Ensure this is the correct base URL
 // export default baseUrl;
+
+const baseUrl = "http://localhost:3001";
+
+export default baseUrl;
