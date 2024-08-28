@@ -118,6 +118,7 @@ import express from "express";
 import { MongoClient, ObjectId } from "mongodb";
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
 
 // Load environment variables from .env file
 dotenv.config();
@@ -222,6 +223,13 @@ app.delete("/records/:id", async (req, res) => {
     res.status(500).send({ error: "Error deleting record", details: e.message });
   }
 });
+
+//Production Script 
+
+app.use(express.static("./client/build"));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+})
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
